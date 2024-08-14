@@ -1,12 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:randosel_main_1/firebase_options.dart';
 import 'pages/daily_words_page.dart';
 import 'pages/daily_test_page.dart';
 import 'pages/review_note_page.dart';
 import 'pages/contact_page.dart';
 import 'pages/user_info_page.dart';
+import 'pages/login_page.dart';
 
-void main() {
-  runApp(MyApp());
+import 'package:firebase_core/firebase_core.dart';
+
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized(); // 비동기 초기화를 위한 설정
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(
+    MyApp(
+    )
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -19,7 +31,8 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         brightness: Brightness.light,
       ),
-      home: MainPage(),
+      // home: MainPage(),
+      home: AuthScreen(), // 처음에는 AuthScreen을 표시합니다.
     );
   }
 }
