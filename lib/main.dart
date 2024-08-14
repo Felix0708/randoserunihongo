@@ -3,6 +3,7 @@ import 'pages/daily_words_page.dart';
 import 'pages/daily_test_page.dart';
 import 'pages/review_note_page.dart';
 import 'pages/contact_page.dart';
+import 'pages/user_info_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -53,6 +54,19 @@ class MainPage extends StatelessWidget {
             _buildDrawerItem(context, 'Daily Test', Icons.assignment, DailyTestPage()),
             _buildDrawerItem(context, 'Review Note', Icons.note, ReviewNotePage()),
             _buildDrawerItem(context, 'Contact', Icons.contact_mail, ContactPage()),
+            const Divider(),
+            ListTile(
+              title: const Text('John Doe', style: TextStyle(color: Colors.black)),
+              subtitle: const Text('View Profile', style: TextStyle(color: Colors.grey)),
+              leading: const Icon(Icons.person, color: Colors.black),
+              onTap: () {
+                Navigator.pop(context); // Close the drawer
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => UserInfoPage()),
+                );
+              },
+            ),
           ],
         ),
       ),
