@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "308185640102",
+    "project_id": "randoserunihongo-e7369",
+    "storage_bucket": "randoserunihongo-e7369.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:308185640102:android:918678a367edd08ce6d867",
+        "android_client_info": {
+          "package_name": "com.example.randosel_main_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5of7_4eXXBaGpxWWID90KKymSKoB2z74"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
